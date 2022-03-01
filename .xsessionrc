@@ -1,0 +1,4 @@
+#! /bin/bash
+
+# Set background image with feh
+feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png &
