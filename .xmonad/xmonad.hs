@@ -13,27 +13,15 @@ import XMonad.Layout.Spiral
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal    = "xterm"
-myModMask     = mod4Mask
-myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
 
-myBorderWidth        = 5
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
-
-myEventHook   = mempty
-myLogHook     = return ()
-myStartupHook = return ()
-myLayoutHook  = spacing 10 $
-                        Tall 1 (3/100) (1/2)          |||
-                        spiral (125 % 146)            |||
-                        Grid                          |||
-                        Mirror (Tall 1 (3/100) (3/5)) |||
-                        Full
-
+main :: IO ()
+main = do
+  xmproc <- spawnPipe "/usr/bin/xmobar"
+  xmonad defaults
 
 
 defaults = def { -- basic
@@ -51,6 +39,23 @@ defaults = def { -- basic
                , layoutHook         = myLayoutHook
                }
 
-main :: IO ()
-main = xmonad defaults
 
+myTerminal    = "xterm"
+myModMask     = mod4Mask
+myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
+
+
+myBorderWidth        = 5
+myNormalBorderColor  = "#dddddd"
+myFocusedBorderColor = "#ff0000"
+
+
+myEventHook   = mempty
+myLogHook     = return ()
+myStartupHook = return ()
+myLayoutHook  = spacing 10 $
+                        Tall 1 (3/100) (1/2)          |||
+                        spiral (125 % 146)            |||
+                        Grid                          |||
+                        Mirror (Tall 1 (3/100) (3/5)) |||
+                        Full
