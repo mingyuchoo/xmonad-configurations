@@ -16,7 +16,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal    = "urxvt"
+myTerminal    = "xterm"
 myModMask     = mod4Mask
 myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
 

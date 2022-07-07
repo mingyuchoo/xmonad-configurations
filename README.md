@@ -10,6 +10,7 @@ $ sudo apt install -y feh libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-t
 
 ```sh
 $ sudo apt install -y xmonad
+$ xmoand --recompile
 ```
 
 ## Install `xmobar`
