@@ -39,9 +39,14 @@ defaults = def { -- basic
                , layoutHook         = myLayoutHook
                }
 
+-- ModMask = mod1Mask: Left `Alt` key
+--         | mod2Mask: Numblock `Num` key
+--         | mod3Mask: Undefined
+--         | mod4Mask: `Win` key, also called "Super key" in Linux
+--         | mod5Mask: "ISO_Level3_Shift" key
+myModMask     = mod4Mask
 
 myTerminal    = "xterm"
-myModMask     = mod4Mask
 myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
 
 

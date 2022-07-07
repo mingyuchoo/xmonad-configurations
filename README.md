@@ -3,27 +3,30 @@
 ## Prerequisite
 
 ```sh
-$ sudo apt install -y feh libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
+sudo apt install -y feh libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
 ```
 
 ## Install `xmonad`
 
 ```sh
-$ sudo apt install -y xmonad
-$ xmoand --recompile
+sudo apt install -y xmonad-contrib xmonad
+cp -r .xmonad $HOME
+xmoand --recompile
 ```
+
+if you change `$HOME/.xmonad/xmonad.hs` file,
+please run `xmonad --recompile` command
 
 ## Install `xmobar`
 
 ```sh
-$ sudo apt install -y xmobar
+sudo apt install -y xmobar
+cp -r .config $HOME
 ```
 
-## Need to run
+## Other things
 
 ```sh
-$ cp -r .config $HOME
-$ cp .Xresources .xsessionrc $HOME
-$ xrdb -merge $HOME/.Xresources
+cp .Xresources .xsessionrc $HOME
+xrdb -merge $HOME/.Xresources
 ```
-
