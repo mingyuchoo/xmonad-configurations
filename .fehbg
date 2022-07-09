@@ -1,4 +1,4 @@
 #! /bin/bash
 
 # chmod +x .fehbg
-feh --no-fehbg --bg-center /usr/share/backgrounds/warty-final-ubuntu.png &
+feh --no-fehbg --bg-fill /usr/share/backgrounds/warty-final-ubuntu.png &
