@@ -1,4 +1,4 @@
 #! /bin/bash
 
-# Set background image with feh
-feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png &
+# chmod +x .fehbg
+feh --no-fehbg --bg-center /usr/share/backgrounds/warty-final-ubuntu.png &
