@@ -31,3 +31,6 @@ cp -r .config $HOME
 cp .Xresources .xsessionrc $HOME
 xrdb -merge $HOME/.Xresources
 ```
+## Referencies
+
+- https://travishorn.com/the-xmonad-window-manager-on-arch-linux
