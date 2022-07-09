@@ -46,7 +46,7 @@ defaults = def { -- basic
 --         | mod5Mask: "ISO_Level3_Shift" key
 myModMask     = mod4Mask
 
-myTerminal    = "xterm"
+myTerminal    = "urxvt"
 myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
 
 
