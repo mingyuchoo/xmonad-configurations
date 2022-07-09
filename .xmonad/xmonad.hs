@@ -20,7 +20,8 @@ import qualified Data.Map        as M
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar"
+  xmproc <- spawnPipe "xmobar"
+  xmproc <- spawnPipe "$HOME/.fehbg"
   xmonad defaults
 
 
