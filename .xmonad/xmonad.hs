@@ -20,9 +20,9 @@ import qualified Data.Map        as M
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "xmobar"
+  xmproc <- spawnPipe "/usr/bin/xmobar"
   xmproc <- spawnPipe "$HOME/.fehbg"
-  xmonad defaults
+  xmonad $ docks defaults
 
 
 defaults = def { -- basic
@@ -59,9 +59,9 @@ myFocusedBorderColor = "#ff0000"
 myEventHook   = mempty
 myLogHook     = return ()
 myStartupHook = return ()
-myLayoutHook  = spacing 10 $
-                        Tall 1 (3/100) (1/2)          |||
-                        spiral (125 % 146)            |||
-                        Grid                          |||
-                        Mirror (Tall 1 (3/100) (3/5)) |||
-                        Full
+myLayoutHook  = avoidStruts (spacing 10 $
+                             Tall 1 (3/100) (1/2)          |||
+                             spiral (125 % 146)            |||
+                             Grid                          |||
+                             Mirror (Tall 1 (3/100) (3/5)) |||
+                             Full)
