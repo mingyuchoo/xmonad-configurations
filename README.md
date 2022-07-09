@@ -3,7 +3,8 @@
 ## Prerequisite
 
 ```sh
-sudo apt install -y feh libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
+sudo apt install -y libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
+sudo apt install -y rxvt-unicode feh
 ```
 
 ## Install `xmonad`
