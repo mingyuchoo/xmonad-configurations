@@ -13,8 +13,9 @@ import XMonad.Layout.Gaps
 import XMonad.Layout.Grid
 import XMonad.Layout.Spacing
 import XMonad.Layout.Spiral
+import XMonad.Layout.ThreeColumns
 import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.EZConfig(additionalKeysP)
 
 
 import qualified XMonad.StackSet as W
@@ -24,8 +25,7 @@ import qualified Data.Map        as M
 main :: IO ()
 main = do
   xmproc <- spawnPipe "$HOME/.fehbg"
-  -- xmonad $ docks defaults
-  xmonad .ewmhFullscreen . ewmh =<< xmobar defaults
+  xmonad . ewmhFullscreen . ewmh =<< xmobar defaults
 
 
 defaults = def { -- basic
@@ -42,6 +42,8 @@ defaults = def { -- basic
                , startupHook        = myStartupHook
                , layoutHook         = myLayoutHook
                }
+           `additionalKeysP` myAdditionalKeys
+
 
 -- ModMask = mod1Mask: Left `Alt` key
 --         | mod2Mask: Numblock `Num` key
@@ -51,7 +53,7 @@ defaults = def { -- basic
 myModMask     = mod1Mask
 
 myTerminal    = "urxvt -fg white -bg black"
-myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
+myWorkspaces  = ["1","2","3","4"]
 
 
 myBorderWidth        = 2
@@ -62,10 +64,18 @@ myFocusedBorderColor = "#E8AA42"
 myEventHook   = mempty
 myLogHook     = return ()
 myStartupHook = return ()
-myLayoutHook  = avoidStruts (spacing 10 $
-                             Tall 1 (3/100) (1/2)          |||
-                             spiral (125 % 146)            |||
-                             Grid                          |||
-                             Mirror (Tall 1 (3/100) (3/5)) |||
-                             Full)
+myLayoutHook  = avoidStruts $ spacing 10 $ myLayout
+
+
+myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
+  where
+    threeCol = ThreeColMid nmaster delta ratio
+    tiled    = Tall nmaster delta ratio
+    nmaster  = 1     -- Detfault number of windows in the master pane
+    ratio    = 1/2   -- Default proportion of screen occupied by master pane
+    delta    = 3/100 -- Percent of screen to increment by when resizing paines
+
+
+myAdditionalKeys = [ ("M-t", spawn "xterm")
+                   ]
 
