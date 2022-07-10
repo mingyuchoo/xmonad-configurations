@@ -1,5 +1,7 @@
 # xmonad-configurations
 
+**xmonad >= 0.17.0**
+
 ## Prerequisite
 
 ```sh
@@ -10,7 +12,7 @@ sudo apt install -y rxvt-unicode feh
 ## Install `xmonad`
 
 ```sh
-sudo apt install -y xmonad-contrib xmonad
+sudo apt install -y xmonad-contrib xmonad  # xmonad >= 0.17.0
 cp -r .xmonad $HOME
 xmoand --recompile
 ```
@@ -22,7 +24,7 @@ please run `xmonad --recompile` command
 
 ```sh
 sudo apt install -y xmobar
-cp -r .config $HOME
+cp .xmobarrc $HOME
 ```
 
 ## Other things

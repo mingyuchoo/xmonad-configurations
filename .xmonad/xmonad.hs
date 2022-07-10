@@ -5,6 +5,9 @@ import System.IO
 import XMonad
 import XMonad.Actions.WorkspaceNames
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.StatusBar
+import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Gaps
 import XMonad.Layout.Grid
@@ -20,9 +23,9 @@ import qualified Data.Map        as M
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar"
   xmproc <- spawnPipe "$HOME/.fehbg"
-  xmonad $ docks defaults
+  -- xmonad $ docks defaults
+  xmonad .ewmhFullscreen . ewmh =<< xmobar defaults
 
 
 defaults = def { -- basic
@@ -45,7 +48,7 @@ defaults = def { -- basic
 --         | mod3Mask: Undefined
 --         | mod4Mask: `Win` key, also called "Super key" in Linux
 --         | mod5Mask: "ISO_Level3_Shift" key
-myModMask     = mod4Mask
+myModMask     = mod1Mask
 
 myTerminal    = "urxvt -fg white -bg black"
 myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
@@ -65,3 +68,4 @@ myLayoutHook  = avoidStruts (spacing 10 $
                              Grid                          |||
                              Mirror (Tall 1 (3/100) (3/5)) |||
                              Full)
+
