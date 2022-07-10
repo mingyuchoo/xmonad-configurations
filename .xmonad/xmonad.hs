@@ -54,9 +54,9 @@ myTerminal    = "urxvt -fg white -bg black"
 myWorkspaces  = ["1","2","3","4","5","6","7","8","9"]
 
 
-myBorderWidth        = 5
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myBorderWidth        = 2
+myNormalBorderColor  = "#231955"
+myFocusedBorderColor = "#E8AA42"
 
 
 myEventHook   = mempty
