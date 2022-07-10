@@ -34,3 +34,4 @@ xrdb -merge $HOME/.Xresources
 ## Referencies
 
 - https://travishorn.com/the-xmonad-window-manager-on-arch-linux
+- https://xmonad.org/TUTORIAL.html
