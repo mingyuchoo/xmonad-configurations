@@ -76,7 +76,7 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     delta    = 3/100 -- Percent of screen to increment by when resizing paines
 
 
-myAdditionalKeys = [ ("M-t", spawn "xterm")
+myAdditionalKeys = [ ("M-e", spawn "emacs")
                    , ("M-f", spawn "firefox")
+                   , ("M-t", spawn "urxvt")
                    ]
-
