@@ -1,8 +1,11 @@
 ! Restore Ctrl+Shift+(c|v)
+urxvt*foreground: white
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.scrollBar: false
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 URxvt.boldFont:
-
+URxvt.transparent: true
+URxvt.tintColor: white
+URxvt.shading: 20
