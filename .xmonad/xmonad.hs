@@ -52,7 +52,7 @@ defaults = def { -- basic
 --         | mod5Mask: "ISO_Level3_Shift" key
 myModMask     = mod1Mask
 
-myTerminal    = "urxvt -fg white -bg black"
+myTerminal    = "urxvt"
 myWorkspaces  = ["1","2","3","4"]
 
 
@@ -64,7 +64,7 @@ myFocusedBorderColor = "#E8AA42"
 myEventHook   = mempty
 myLogHook     = return ()
 myStartupHook = return ()
-myLayoutHook  = avoidStruts $ spacing 10 $ myLayout
+myLayoutHook  = avoidStruts $ spacing 12 $ myLayout
 
 
 myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
@@ -77,5 +77,6 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
 
 
 myAdditionalKeys = [ ("M-t", spawn "xterm")
+                   , ("M-f", spawn "firefox")
                    ]
 
