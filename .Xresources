@@ -2,7 +2,7 @@
 urxvt*foreground: white
 
 !URxvt.boldFont:
-URxvt.font: xft:pixselsize=22
+URxvt.font: xft:Monospace:pixelsize=20
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
