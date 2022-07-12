@@ -2,7 +2,8 @@
 urxvt*foreground: white
 
 !URxvt.boldFont:
-URxvt.font: xft:Monospace:pixelsize=20
+!URxvt.font: xft:Monospace:pixelsize=20
+URxvt.font: xft:CaskaydiaCove Nerd Font Mono:size=12
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard

@@ -1,4 +1,4 @@
-Config { font = "xft:Bitstream Vera Sans Mono:size=20:bold:antialias=true"
+Config { font = "xft:CaskaydiaCove Nerd Font Mono:size=14"
        , borderColor = "black"
        , border = TopB
        , bgColor = "black"
