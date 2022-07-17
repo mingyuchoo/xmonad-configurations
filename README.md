@@ -2,37 +2,43 @@
 
 **xmonad >= 0.17.0**
 
-## Prerequisite
+## For Arch Linux
+
+### Install
 
 ```sh
-sudo apt install -y libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
-sudo apt install -y rxvt-unicode feh
+sudo pacman -S xmonad xmonad-contrib xmobar
+sudo pacman -S rxvt-unicode feh
 ```
 
-## Install `xmonad`
+### Congiure
 
 ```sh
-sudo apt install -y xmonad-contrib xmonad  # xmonad >= 0.17.0
 cp -r .xmonad $HOME
+cp .xmobarrc $HOME
+cp .Xresources .xinitrc $HOME
 xmoand --recompile
 ```
 
-if you change `$HOME/.xmonad/xmonad.hs` file,
-please run `xmonad --recompile` command
+## For Ubuntu
 
-## Install `xmobar`
+### Install
 
 ```sh
-sudo apt install -y xmobar
+sudo apt install -y libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
+sudo apt install -y xmonad xmonad-contrib xmobar
+sudo apt install -y rxvt-unicode feh
+```
+
+### Congiure
+
+```sh
+cp -r .xmonad $HOME
 cp .xmobarrc $HOME
+cp .Xresources .xinitrc $HOME
+xmoand --recompile
 ```
 
-## Other things
-
-```sh
-cp .Xresources .xsessionrc $HOME
-xrdb -merge $HOME/.Xresources
-```
 ## Referencies
 
 - https://travishorn.com/the-xmonad-window-manager-on-arch-linux
