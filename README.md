@@ -6,14 +6,14 @@
 
 ### Install
 
-```sh
+```bash
 sudo pacman -S xmonad xmonad-contrib xmobar
 sudo pacman -S rxvt-unicode feh
 ```
 
 ### Congiure
 
-```sh
+```bash
 cp -r .xmonad $HOME
 cp .xmobarrc $HOME
 cp .Xresources .xinitrc $HOME
@@ -24,7 +24,7 @@ xmoand --recompile
 
 ### Install
 
-```sh
+```bash
 sudo apt install -y libghc-xmonad-contrib-dev libghc-xmonad-dev suckless-tools
 sudo apt install -y xmonad xmonad-contrib xmobar
 sudo apt install -y rxvt-unicode feh
@@ -32,7 +32,7 @@ sudo apt install -y rxvt-unicode feh
 
 ### Congiure
 
-```sh
+```bash
 cp -r .xmonad $HOME
 cp .xmobarrc $HOME
 cp .Xresources .xinitrc $HOME
