@@ -13,8 +13,8 @@
 ### Install
 
 ```bash
-sudo pacman -S xmonad xmonad-contrib xmobar
-sudo pacman -S rxvt-unicode feh
+yes | sudo pacman -S xmonad xmonad-contrib xmobar
+yes | sudo pacman -S rxvt-unicode feh
 ```
 
 ### Congiure
