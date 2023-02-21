@@ -1,4 +1,4 @@
-mport Data.Monoid
+import Data.Monoid
 import Data.Ratio
 import System.Exit
 import System.IO
