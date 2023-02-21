@@ -1,12 +1,6 @@
 #! /bin/bash
 
-# Set background image with feh
-feh --no-fehbg --bg-fill $HOME/Pictures/pexels-pixabay-220201.jpg &
-
 # Change display resolutions
 ## xrandr --listmonitors
 ## xrandr --current
-xrandr --auto --output HDMI-1 --mode 2560x1440 --scale 1.0x1.0 --left-of eDP-1
-
-# Set X-window X cursor to pointer
-xsetroot -cursor_name left_ptr
+xrandr --auto --output Virtual1 --mode 2560x1600 --scale 1.0x1.0

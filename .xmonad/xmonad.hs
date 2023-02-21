@@ -24,7 +24,7 @@ import qualified Data.Map        as M
 
 main :: IO ()
 main = do
-  -- xmproc <- spawnPipe "$HOME/.fehbg"
+  xmproc <- spawnPipe "$HOME/.fehbg"
   xmonad . ewmhFullscreen . ewmh =<< xmobar defaults
 
 
