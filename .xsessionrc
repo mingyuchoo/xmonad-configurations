@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# Set background image with feh
-feh --no-fehbg --bg-fill $HOME/Pictures/pexels-pixabay-220201.jpg &
-
 # Change display resolutions
 ## xrandr --listmonitors
 ## xrandr --current
