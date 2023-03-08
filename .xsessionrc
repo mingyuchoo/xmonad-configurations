@@ -9,4 +9,4 @@ feh --no-fehbg --bg-fill $HOME/Pictures/pexels-pixabay-220201.jpg &
 xrandr --auto --output HDMI-1 --mode 2560x1440 --scale 1.0x1.0 --left-of eDP-1
 
 # Set X-window X cursor to pointer
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr 32

@@ -45,6 +45,24 @@ cp .Xresources .xinitrc $HOME
 xmoand --recompile
 ```
 
+## How to change mouse wheel to natural
+
+modify `/usr/share/X11/xorg.conf.d/40-libinput.conf`
+
+```
+Section "InputClass"
+    Identifier "libinput pointer catchall"
+    ...
+    Option "NaturalScrolling" "true"
+EndSection
+
+Section "InputClass"
+    Identifier "libinput touchpad catchall"
+    ...
+    Option "NaturalScrolling" "true"
+EndSection
+```
+
 ## Referencies
 
 - https://travishorn.com/the-xmonad-window-manager-on-arch-linux
